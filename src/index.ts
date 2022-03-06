@@ -19,6 +19,7 @@ export * from './hooks/useFullScreen';
 export * from './hooks/useHash';
 export * from './hooks/useHotkeys';
 export * from './hooks/useHover';
+export * from './hooks/useIdle';
 export * from './hooks/useImageOnLoad';
 export * from './hooks/useIntersectionObserver';
 export * from './hooks/useInterval';
