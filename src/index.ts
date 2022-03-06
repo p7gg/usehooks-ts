@@ -39,6 +39,7 @@ export * from './hooks/useOs';
 export * from './hooks/usePageLeave';
 export * from './hooks/usePagination';
 export * from './hooks/useReadLocalStorage';
+export * from './hooks/useReducedMotion';
 export * from './hooks/useScreen';
 export * from './hooks/useScript';
 export * from './hooks/useSsr';
