@@ -1,4 +1,3 @@
-export * from './hooks/useCounter/';
 export * from './hooks/useBoolean';
 export * from './hooks/useClickAnyWhere';
 export * from './hooks/useCopyToClipboard';
