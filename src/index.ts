@@ -44,6 +44,7 @@ export * from './hooks/useSsr';
 export * from './hooks/useStep';
 export * from './hooks/useTernaryDarkMode';
 export * from './hooks/useTimeout';
+export * from './hooks/useUncontrolled';
 export * from './hooks/useUpdateEffect';
 export * from './hooks/useWindowEvent';
 export * from './hooks/useWindowSize';
