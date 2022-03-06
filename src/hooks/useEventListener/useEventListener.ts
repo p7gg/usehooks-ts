@@ -1,8 +1,40 @@
 import { RefObject, useEffect, useRef } from 'react';
 
-// See: https://usehooks-ts.com/react-hook/use-isomorphic-layout-effect
 import { useIsomorphicLayoutEffect } from '../useIsomorphicLayoutEffect';
 
+/**
+ * Use EventListener with simplicity by React Hook. It takes as parameters a eventName,
+ * a call-back functions (handler) and optionally a reference element.
+ * You can see above two examples using useRef and window based event.
+ *
+ * @see https://usehooks-ts.com/react-hook/use-event-listener
+ *
+ * @example
+ * export default function Component() {
+ *   // Define button ref
+ *   const buttonRef = useRef<HTMLButtonElement>(null)
+ *
+ *   const onScroll = (event: Event) => {
+ *     console.log('window scrolled!', event)
+ *   }
+ *
+ *   const onClick = (event: Event) => {
+ *     console.log('button clicked!', event)
+ *   }
+ *
+ *   // example with window based event
+ *   useEventListener('scroll', onScroll)
+ *
+ *   // example with element based event
+ *   useEventListener('click', onClick, buttonRef)
+ *
+ *   return (
+ *     <div style={{ minHeight: '200vh' }}>
+ *       <button ref={buttonRef}>Click me</button>
+ *     </div>
+ *   )
+ * }
+ */
 function useEventListener<K extends keyof WindowEventMap>(
   eventName: K,
   handler: (event: WindowEventMap[K]) => void,
