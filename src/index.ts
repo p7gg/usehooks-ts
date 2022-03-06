@@ -32,6 +32,7 @@ export * from './hooks/useLockedBody';
 export * from './hooks/useMap';
 export * from './hooks/useMediaQuery';
 export * from './hooks/useMergedRef';
+export * from './hooks/useMouse';
 export * from './hooks/useOnClickOutside';
 export * from './hooks/useReadLocalStorage';
 export * from './hooks/useScreen';
