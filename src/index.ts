@@ -35,6 +35,7 @@ export * from './hooks/useMergedRef';
 export * from './hooks/useMouse';
 export * from './hooks/useMove';
 export * from './hooks/useOnClickOutside';
+export * from './hooks/useOs';
 export * from './hooks/useReadLocalStorage';
 export * from './hooks/useScreen';
 export * from './hooks/useScript';
