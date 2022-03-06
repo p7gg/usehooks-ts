@@ -13,6 +13,7 @@ export * from './hooks/useElementSize';
 export * from './hooks/useEventListener';
 export * from './hooks/useFetch';
 export * from './hooks/useFocusReturn';
+export * from './hooks/useFocusTrap';
 export * from './hooks/useHover';
 export * from './hooks/useImageOnLoad';
 export * from './hooks/useIntersectionObserver';
