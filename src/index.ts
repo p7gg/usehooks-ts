@@ -17,6 +17,7 @@ export * from './hooks/useFocusTrap';
 export * from './hooks/useForceUpdate';
 export * from './hooks/useFullScreen';
 export * from './hooks/useHash';
+export * from './hooks/useHotkeys';
 export * from './hooks/useHover';
 export * from './hooks/useImageOnLoad';
 export * from './hooks/useIntersectionObserver';
