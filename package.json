@@ -18,15 +18,19 @@
     "transform": {
       ".(ts|tsx)": "ts-jest"
     },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.([tj]sx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
-      "js"
+      "js",
+      "jsx",
+      "json",
+      "node"
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/dist/"
-    ]
+    ],
+    "testEnvironment": "jsdom"
   },
   "peerDependencies": {
     "react": ">= 16.8.0",
