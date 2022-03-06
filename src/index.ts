@@ -43,6 +43,7 @@ export * from './hooks/useReducedMotion';
 export * from './hooks/useResizeObserver';
 export * from './hooks/useScreen';
 export * from './hooks/useScript';
+export * from './hooks/useScrollIntoView';
 export * from './hooks/useSsr';
 export * from './hooks/useStep';
 export * from './hooks/useTernaryDarkMode';
