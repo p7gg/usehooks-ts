@@ -1,42 +1,49 @@
-import { useCallback, useState } from 'react';
-import { validateInitialValue } from '../../helpers/validateInitialValue';
+import { Dispatch, SetStateAction, useState } from 'react';
 
-type IUseCounter = {
+interface ReturnType {
   count: number;
   increment: () => void;
-  reset: () => void;
   decrement: () => void;
-};
+  reset: () => void;
+  setCount: Dispatch<SetStateAction<number>>;
+}
 
 /**
- * Classic counter example to help understand the flow of this npm package
+ * A simple abstraction to play with a counter, don't repeat yourself.
+ *
+ * @see https://usehooks-ts.com/react-hook/use-counter
  *
  * @example
- *   const ExampleComponent = () => {
- *     const { count, increment, reset, decrement } = useCounter();
+ * export default function Component() {
+ *   const { count, setCount, increment, decrement, reset } = useCounter(0)
  *
- *     return (
- *       <>
- *         <button onClick={increment}>Increment counter</button>
- *         <button onClick={reset}>Reset counter</button>
- *         <button onClick={decrement}>Decrement counter</button>
- *         <p>{count}</p>
- *       </>
- *      )
- *    }
+ *   const multiplyBy2 = () => setCount(x => x * 2)
+ *
+ *   return (
+ *     <>
+ *       <p>Count is {count}</p>
+ *       <button onClick={increment}>Increment</button>
+ *       <button onClick={decrement}>Decrement</button>
+ *       <button onClick={reset}>Reset</button>
+ *       <button onClick={multiplyBy2}>Multiply by 2</button>
+ *     </>
+ *   )
+ * }
  */
+function useCounter(initialValue?: number): ReturnType {
+  const [count, setCount] = useState(initialValue || 0);
 
-function useCounter(initialValue: number = 0): IUseCounter {
-  const validatedInitialValue = validateInitialValue(initialValue);
+  const increment = () => setCount((x) => x + 1);
+  const decrement = () => setCount((x) => x - 1);
+  const reset = () => setCount(initialValue || 0);
 
-  const [count, setCount] = useState<number>(validatedInitialValue);
-  const increment = useCallback(() => setCount((value) => value + 1), []);
-  const decrement = useCallback(() => setCount((value) => value - 1), []);
-  const reset = useCallback(
-    () => setCount(validatedInitialValue),
-    [validatedInitialValue],
-  );
-  return { count, increment, decrement, reset };
+  return {
+    count,
+    increment,
+    decrement,
+    reset,
+    setCount,
+  };
 }
 
 export default useCounter;
