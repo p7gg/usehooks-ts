@@ -51,4 +51,5 @@ export * from './hooks/useTimeout';
 export * from './hooks/useUncontrolled';
 export * from './hooks/useUpdateEffect';
 export * from './hooks/useWindowEvent';
+export * from './hooks/useWindowScroll';
 export * from './hooks/useWindowSize';
