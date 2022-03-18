@@ -6,6 +6,7 @@ export * from './hooks/useCounter';
 export * from './hooks/useDarkMode';
 export * from './hooks/useDebounce';
 export * from './hooks/useDidUpdate';
+export * from './hooks/useDisclosure';
 export * from './hooks/useDocumentTitle';
 export * from './hooks/useEffectOnce';
 export * from './hooks/useElementSize';
