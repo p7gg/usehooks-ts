@@ -51,7 +51,7 @@ function useStep(maxStep: number): [number, Helpers] {
   const canGoToPrevStep = useMemo(() => currentStep - 1 >= 1, [currentStep]);
 
   const setStep = useCallback(
-    (step) => {
+    (step: number | ((step: number) => number)) => {
       // Allow value to be a function so we have the same API as useState
       const newStep = step instanceof Function ? step(currentStep) : step;
 
